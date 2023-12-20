@@ -14,15 +14,7 @@ class Server {
 
         // configuraciones de sockets
 
-        this.io = socketIo(this.server, {
-            cors: {
-                origin: "https://01-socket-server-basic-cherniakovskys-projects.vercel.app/",
-                methods: ["GET", "POST"],
-                transports: ['websocket', 'polling'],
-                credentials: true
-            },
-            allowEIO3: true
-        });
+        this.io = socketIo(this.server);
     }
 
     middlewares(){
