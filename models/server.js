@@ -16,7 +16,7 @@ class Server {
 
         this.io = socketIo(this.server, {
             cors: {
-                origin: "http://localhost:8080",
+                origin: "https://01-socket-server-basic-cherniakovskys-projects.vercel.app/",
                 methods: ["GET", "POST"],
                 transports: ['websocket', 'polling'],
                 credentials: true
