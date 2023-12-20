@@ -14,7 +14,15 @@ class Server {
 
         // configuraciones de sockets
 
-        this.io = socketIo(this.server, {/* configuraciones server */});
+        this.io = socketIo(this.server, {
+            cors: {
+                origin: "http://localhost:8080",
+                methods: ["GET", "POST"],
+                transports: ['websocket', 'polling'],
+                credentials: true
+            },
+            allowEIO3: true
+        });
     }
 
     middlewares(){
